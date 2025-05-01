@@ -3,8 +3,14 @@ import { ProductElement } from '../types/Product.types'
 
 export const CartContext = createContext({
   cartData: [] as Array<ProductElement>,
-  setCartData: (productArr: ProductElement[]) => {},
-  addToCart: (product: ProductElement) => {},
-  removeFromCart: (ProductID: number) => {},
+  setCartData: (_productArr: ProductElement[]) => {
+    console.log('setCartData init ', _productArr)
+  },
+  addToCart: (product: ProductElement) => {
+    console.log('addToCart init ', product)
+  },
+  removeFromCart: (ProductID: number) => {
+    console.log('removeFromCart init ', ProductID)
+  },
   clearCart: () => {},
 })

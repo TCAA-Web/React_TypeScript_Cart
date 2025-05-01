@@ -11,7 +11,7 @@ export const Cart = () => {
         <ul>
           {cartData.map((product) => {
             return (
-              <li>
+              <li key={product.id}>
                 <b>{product.title}</b>
                 <p>{product.price * product.quantity!} Dkk</p>
                 <button onClick={() => removeFromCart(product.id)}>-</button>
